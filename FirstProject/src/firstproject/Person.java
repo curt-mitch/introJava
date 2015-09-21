@@ -14,6 +14,16 @@ public class Person {
     private String firstName;
     private String lastName;
     private int age;
+    private Person mother;
+
+    public Person getMother() {
+        return mother;
+    }
+
+    public void setMother(Person mother) {
+        this.mother = mother;
+    }
+    
 
     public Person() { // defined (default) constructor (usually Java adds this itself)
         age = 18; // age for every new Person will be 18 unless changed later

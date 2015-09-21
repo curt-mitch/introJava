@@ -23,15 +23,16 @@ public class Main {
     private void run() {
         Person p = new Person();
 //        p.setFirstName("Ben");
+        p.setFirstName("Ben");
         p.setLastName("Evans");
-        int i = 234;
-        double d = 54.25;
-        boolean b = true;
-        char c = 'X';
         
-        i = (int) d;
+        Person mom = new Person();
+        mom.setFirstName("Sue");
+        mom.setLastName("Evans");
+        
+        p.setMother(mom);
 
-        System.out.println(p.getFullName() + " : Age : " + i);
+        System.out.println(p.getFullName() + " : Mom: " + p.getMother().getFullName());
 
         p.setAge(21);
 
