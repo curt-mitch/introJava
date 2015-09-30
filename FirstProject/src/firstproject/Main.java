@@ -31,10 +31,10 @@ public class Main {
         mom.setFirstName("Sue");
         mom.setLastName("Evans");
 
-        for (int i = 0; i < 10; i++) {
-            System.out.println(p.getFullName() + " : Age: " + p.getAge() + " ; i=" + i);
+        do {
+            System.out.println(p.getFullName() + " : Age: " + p.getAge());
             p.birthday();
-        }
+        } while (p.getAge() < 42);
         
     }
 
