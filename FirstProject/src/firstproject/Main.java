@@ -31,11 +31,21 @@ public class Main {
         mom.setFirstName("Sue");
         mom.setLastName("Evans");
 
-        do {
-            System.out.println(p.getFullName() + " : Age: " + p.getAge());
+        AGE: while (p.getAge() < 55) {
+            switch (p.getAge()) {
+                case 40:
+                    System.out.println(p.getFullName() + " - Significant Birthday ; " + p.getAge());
+                    break;
+            
+                case 50:
+                    System.out.println(p.getFullName() + " - Significant Birthday ; " + p.getAge());
+                    break AGE;
+            }
+
             p.birthday();
-        } while (p.getAge() < 42);
+        }
         
+        System.out.println(p.getFullName() + " : Age: " + p.getAge());
     }
 
 }
