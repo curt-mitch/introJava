@@ -25,18 +25,17 @@ public class Main {
 //        p.setFirstName("Ben");
         p.setFirstName("Ben");
         p.setLastName("Evans");
-        
+        p.setAge(21);
+
         Person mom = new Person();
         mom.setFirstName("Sue");
         mom.setLastName("Evans");
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println(p.getFullName() + " : Age: " + p.getAge() + " ; i=" + i);
+            p.birthday();
+        }
         
-        p.setMother(mom);
-
-        System.out.println(p.getFullName() + " : Mom: " + p.getMother().getFullName());
-
-        p.setAge(21);
-
-        System.out.println(p.getFullName() + " : Age : " + p.getAge());
     }
 
 }
