@@ -5,6 +5,8 @@
  */
 package firstproject;
 
+import java.io.IOException;
+
 /**
  *
  * @author curtismitchell
@@ -14,10 +16,11 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         Main m = new Main();
         m.run();
+        System.in.read();
     }
 
     private void run() {
