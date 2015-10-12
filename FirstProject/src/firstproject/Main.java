@@ -20,7 +20,6 @@ public class Main {
         // TODO code application logic here
         Main m = new Main();
         m.run();
-        System.in.read();
     }
 
     private void run() {
@@ -28,11 +27,7 @@ public class Main {
 //        p.setFirstName("Ben");
         p.setFirstName("Ben");
         p.setLastName("Evans");
-        p.setAge(21);
-
-        Person mom = new Person();
-        mom.setFirstName("Sue");
-        mom.setLastName("Evans");
+        p.setAge(38);
 
         AGE: while (p.getAge() < 55) {
             switch (p.getAge()) {
@@ -47,15 +42,20 @@ public class Main {
 
             p.birthday();
         }
+
+        for (int i=0; i<40; i++) {
+            System.out.println(Math.random());
+        }
         
-        System.out.println(p.getFullName() + " : Age: " + p.getAge());
+        int i = 0;
         
-//        System.out.println(p.getFullName().equalsIgnoreCase("BEN Evans"));
-        System.out.println(p.getFullName().startsWith("B"));
+        try {
+            i = Integer.parseInt("42gwgwgge");
+        } catch (Exception e) {
         
-        String s = "Dog";
+        }
         
-        s = "DOG";
+        System.out.println(5 + i);
     }
 
 }
