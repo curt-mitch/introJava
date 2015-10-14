@@ -16,6 +16,11 @@ public class Person {
     private int age;
     private Person mother;
 
+    @Override
+    public String toString() {
+        return "Person{" + "firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", mother=" + mother + '}';
+    }
+
     public Person getMother() {
         return mother;
     }

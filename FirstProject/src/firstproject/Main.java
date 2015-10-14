@@ -6,6 +6,7 @@
 package firstproject;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 /**
  *
@@ -22,40 +23,36 @@ public class Main {
         m.run();
     }
 
-    private void run() {
-        Person p = new Person();
-//        p.setFirstName("Ben");
-        p.setFirstName("Ben");
-        p.setLastName("Evans");
-        p.setAge(38);
-
-        AGE: while (p.getAge() < 55) {
-            switch (p.getAge()) {
-                case 40:
-                    System.out.println(p.getFullName() + " - Significant Birthday ; " + p.getAge());
-                    break;
-            
-                case 50:
-                    System.out.println(p.getFullName() + " - Significant Birthday ; " + p.getAge());
-                    break AGE;
-            }
-
-            p.birthday();
-        }
-
-        for (int i=0; i<40; i++) {
-            System.out.println(Math.random());
-        }
+    private void run() {   
         
-        int i = 0;
+        Person ben = new Person();
+        ben.setFirstName("Ben");
+        ben.setLastName("Evans");
+        ben.setAge(38);
         
-        try {
-            i = Integer.parseInt("42gwgwgge");
-        } catch (Exception e) {
+        Person mum = new Person();
+        mum.setFirstName("Sue");
+        mum.setLastName("Evans");
+        mum.setAge(67);
         
+        ben.setMother(mum);
+        
+        Person dad = new Person();
+        dad.setFirstName("Martin");
+        dad.setLastName("Evans");
+        dad.setAge(68);
+        
+        Person[] myFamily = {ben, mum, dad};
+        System.out.println(Arrays.toString(myFamily));
+        
+        double ave = 0.0;
+        for (Person p : myFamily) {
+            ave += p.getAge();
         }
         
-        System.out.println(5 + i);
+        ave = ave / myFamily.length;
+        
+        System.out.println(ave);
     }
 
 }
