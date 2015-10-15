@@ -8,7 +8,9 @@ package firstproject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -44,19 +46,21 @@ public class Main {
         dad.setLastName("Evans");
         dad.setAge(68);
         
-        List<Person> myFamily = new ArrayList<>();
-        myFamily.add(ben);
-        myFamily.add(mum);
-        myFamily.add(dad);
+        Map<String, Person> myFamily = new HashMap<>();
+        myFamily.put("me", ben);
+        myFamily.put("mum", mum);
+        myFamily.put("dad", dad);
         
         double ave = 0.0;
-        for (Person p : myFamily) {
+        for (String s : myFamily.keySet()) {
+            Person p = myFamily.get(s);
             ave += p.getAge();
         }
         
         ave = ave / myFamily.size();
         
         System.out.println(ave);
+        System.out.println(myFamily.get("dad"));
     }
 
 }
