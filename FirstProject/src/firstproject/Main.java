@@ -6,7 +6,9 @@
 package firstproject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -42,15 +44,17 @@ public class Main {
         dad.setLastName("Evans");
         dad.setAge(68);
         
-        Person[] myFamily = {ben, mum, dad};
-        System.out.println(Arrays.toString(myFamily));
+        List<Person> myFamily = new ArrayList<>();
+        myFamily.add(ben);
+        myFamily.add(mum);
+        myFamily.add(dad);
         
         double ave = 0.0;
         for (Person p : myFamily) {
             ave += p.getAge();
         }
         
-        ave = ave / myFamily.length;
+        ave = ave / myFamily.size();
         
         System.out.println(ave);
     }
