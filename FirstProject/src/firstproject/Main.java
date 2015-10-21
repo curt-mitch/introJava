@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -46,21 +47,20 @@ public class Main {
         dad.setLastName("Evans");
         dad.setAge(68);
         
-        Map<String, Person> myFamily = new HashMap<>();
-        myFamily.put("me", ben);
-        myFamily.put("mum", mum);
-        myFamily.put("dad", dad);
+        List<Person> myFamily = new ArrayList<>();
+        myFamily.add(ben);
+        myFamily.add(mum);
+        myFamily.add(dad); 
         
         double ave = 0.0;
-        for (String s : myFamily.keySet()) {
-            Person p = myFamily.get(s);
+        for (Iterator<Person> it = myFamily.iterator(); it.hasNext(); ) {
+            Person p = it.next();
             ave += p.getAge();
         }
         
-        ave = ave / myFamily.size();
+        ave /= myFamily.size();
         
         System.out.println(ave);
-        System.out.println(myFamily.get("dad"));
     }
 
 }
