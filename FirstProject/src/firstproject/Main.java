@@ -61,6 +61,16 @@ public class Main {
         ave /= myFamily.size();
         
         System.out.println(ave);
+        
+        
+        Object o = new Person();
+        
+        System.out.println(o.getClass());
+        o = "Otter";
+        System.out.println(o.getClass());
+        if (o instanceof Person) {
+            System.out.println("o is a Person");
+        }
     }
 
 }
