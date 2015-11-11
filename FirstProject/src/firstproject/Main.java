@@ -30,21 +30,15 @@ public class Main {
 
     private void run() {   
         
-        Person ben = new Person();
-        ben.setFirstName("Ben");
-        ben.setLastName("Evans");
+        Person ben = new Person("Ben", "Evans");
         ben.setAge(38);
         
-        Person mum = new Person();
-        mum.setFirstName("Sue");
-        mum.setLastName("Evans");
+        Person mum = new Person("Sue", "Evans");
         mum.setAge(67);
         
         ben.setMother(mum);
         
-        Person dad = new Person();
-        dad.setFirstName("Martin");
-        dad.setLastName("Evans");
+        Person dad = new Person("Martin", "Evans");
         dad.setAge(68);
         
         List<Person> myFamily = new ArrayList<>();
@@ -63,13 +57,14 @@ public class Main {
         System.out.println(ave);
         
         
-        Object o = new Person();
+        Object o = new Student("Billy", "Bunter");
+        System.out.println(o.getClass());
         
-        System.out.println(o.getClass());
-        o = "Otter";
-        System.out.println(o.getClass());
+//        o = "Otter";
+//        System.out.println(o.getClass());
+        
         if (o instanceof Person) {
-            System.out.println("o is a Person");
+            System.out.println("o is a person");
         }
     }
 
