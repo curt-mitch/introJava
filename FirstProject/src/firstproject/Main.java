@@ -57,11 +57,17 @@ public class Main {
         System.out.println(ave);
         
         
-        Object o = new Student("Billy", "Bunter");
+        Student o = new Student("Billy", "Bunter");
+        Address a = new Address();
+        a.setCity("London");
+        a.setStreetAndHouseNumber("10 Downing Street");
+        a.setPostcode("SW1A xxx");
+        o.setAddr(a);
+                
         System.out.println(o.getClass());
         
 //        o = "Otter";
-//        System.out.println(o.getClass());
+        System.out.println(o.getClass());
         
         if (o instanceof Person) {
             System.out.println("o is a person");
