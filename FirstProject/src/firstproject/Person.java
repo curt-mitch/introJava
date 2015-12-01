@@ -9,11 +9,12 @@ package firstproject;
  *
  * @author curtismitchell
  */
-public class Person {
+public class Person implements Contactable {
     private final String firstName;
     private final String lastName;
     private int age;
     private Person mother;
+    private Contactable answeringService;
     
     public Person(String first, String last) {
         firstName = first;
@@ -21,6 +22,14 @@ public class Person {
         age = 18;
     }
 
+    public Contactable getAnsweringService() {
+        return answeringService;
+    }
+
+    public void setAnsweringService(Contactable answeringService) {
+        this.answeringService = answeringService;
+    }
+    
     @Override
     public String toString() {
         return "Person{" + "firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", mother=" + mother + '}';
@@ -56,5 +65,10 @@ public class Person {
     
     public void birthday () {
         age++;
+    }
+
+    @Override
+    public void contact() {
+        answeringService.contact();
     }
 }
