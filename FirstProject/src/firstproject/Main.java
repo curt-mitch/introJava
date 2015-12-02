@@ -7,11 +7,8 @@ package firstproject;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 /**
  *
@@ -30,15 +27,16 @@ public class Main {
 
     private void run() {   
         
-        Person ben = new Person("Ben", "Evans");
+        Person ben = new Person("Ben", "Evans", new Voicemail("Ben's answering machine"));
         ben.setAge(38);
+        ben.setFavoriteColor(Color.VIOLET);
         
-        Person mum = new Person("Sue", "Evans");
+        Person mum = new Person("Sue", "Evans", new Voicemail("Mum's answering machine"));
         mum.setAge(67);
         
         ben.setMother(mum);
         
-        Person dad = new Person("Martin", "Evans");
+        Person dad = new Person("Martin", "Evans", new Voicemail("Dad's answering machine"));
         dad.setAge(68);
         
         List<Person> myFamily = new ArrayList<>();
@@ -57,7 +55,7 @@ public class Main {
         System.out.println(ave);
         
         
-        Contactable o = new Student("Billy", "Bunter");
+        Contactable o = new Student("Ben", "Evans", mum);
         
         o.callTwice();
 //        c.contact();

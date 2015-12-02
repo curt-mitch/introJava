@@ -22,8 +22,8 @@ public class Student extends Person {
         this.addr = addr;
     }
     
-    public Student(String first, String last) {
-        super(first, last);
+    public Student(String first, String last, Contactable forwarding) {
+        super(first, last, forwarding);
     }
 
     public int getGrade() {
